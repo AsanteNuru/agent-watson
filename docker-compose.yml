@@ -1,0 +1,19 @@
+# version: '3.8'
+
+services:
+  watson:
+    build: .
+    entrypoint: python watson_api_endpoint.py
+    ports:
+      - "8001:8001"
+    environment:
+      - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
+      - TELEGRAM_API_ID=${TELEGRAM_API_ID}
+      - TELEGRAM_API_HASH=${TELEGRAM_API_HASH}
+      - TELEGRAM_PHONE_NUMBER=${TELEGRAM_PHONE_NUMBER}
+      - SUPABASE_URL=${SUPABASE_URL}
+      - SUPABASE_SERVICE_KEY=${SUPABASE_SERVICE_KEY}
+      - API_BEARER_TOKEN=${API_BEARER_TOKEN}
+    volumes:
+      - .:/app
+    restart: unless-stopped

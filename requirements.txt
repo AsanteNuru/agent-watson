@@ -1,0 +1,17 @@
+asyncpg
+pandas
+telethon
+textblob==0.17.1
+openai
+httpx
+
+pydantic==2.10.4
+pydantic-ai==0.0.18
+pydantic-settings==2.7.0
+pydantic_core==2.27.2
+devtools==0.12.2
+logfire==2.11.1
+logfire-api==2.11.1
+supabase==2.11.0
+
+# Other dependencies remain unchanged
